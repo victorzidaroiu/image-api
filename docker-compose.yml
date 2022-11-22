@@ -1,0 +1,17 @@
+version: '2'
+
+services:
+  app:
+    build:
+      context: .
+    environment:
+      HOST: '0.0.0.0'
+      PORT: '8080'
+    volumes:
+      - .:/app
+      - /app/node_modules
+    ports:
+      - 8080:8080
+      # Port for node debugger
+      - 9229:9229
+    command: ["npm", "run", "develop-docker"]

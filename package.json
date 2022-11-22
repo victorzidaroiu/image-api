@@ -1,0 +1,48 @@
+{
+  "name": "imaginary",
+  "version": "0.0.1",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "jest",
+    "lint-code": "eslint -c .eslintrc.js '**/*.ts'",
+    "format": "eslint -c .eslintrc.js '**/*.ts' --fix",
+    "develop-docker": "npm install && npm run develop",
+    "develop": "nodemon --inspect=0.0.0.0:9229",
+    "start": "npm run build && node built/index.js",
+    "build": "tsc"
+  },
+  "author": "Tony Wooster <tony.wooster@contentful.com>",
+  "license": "UNLICENSED",
+  "dependencies": {
+    "express": "^4.17.1",
+    "express-winston": "^4.1.0",
+    "node-fetch": "^2.6.6",
+    "sharp": "^0.28.2",
+    "validator": "^13.7.0",
+    "winston": "^3.3.3"
+  },
+  "devDependencies": {
+    "@tsconfig/node16": "^1.0.2",
+    "@types/express": "^4.17.11",
+    "@types/jest": "^27.0.1",
+    "@types/node": "^16.7.1",
+    "@types/sharp": "^0.28.1",
+    "@types/winston": "^2.4.4",
+    "@typescript-eslint/eslint-plugin": "^4.29.3",
+    "@typescript-eslint/parser": "^4.29.3",
+    "eslint": "^7.32.0",
+    "eslint-config-prettier": "^8.3.0",
+    "eslint-config-standard-with-typescript": "^20.0.0",
+    "eslint-plugin-import": "^2.24.1",
+    "eslint-plugin-node": "^11.1.0",
+    "eslint-plugin-prettier": "^3.4.1",
+    "eslint-plugin-promise": "^4.3.1",
+    "jest": "^27.0.6",
+    "nodemon": "^2.0.7",
+    "prettier": "^2.7.1",
+    "ts-jest": "^27.0.5",
+    "ts-node": "^10.2.1",
+    "typescript": "^4.3.5"
+  }
+}
